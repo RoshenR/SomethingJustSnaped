@@ -1,0 +1,22 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gif-container {
+    height: 60vh;
+    width: 60vw;
+    overflow: hidden;
+}
+
+.gif-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
