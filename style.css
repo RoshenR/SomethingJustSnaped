@@ -5,13 +5,66 @@
 }
 
 body {
-    height: auto;
+    height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #fdf1b8;
 }
 
 #portal-container {
     display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    height: 70%;
+    width: 100%;
+    padding: 0 2% 0 2%;
+}
+
+.portal-mathis {
+    height: 100%;
+    width: 20%;
+    border: black solid 2px;
+
+    object-fit: cover;
+    -webkit-mask-image: url('img/portal-rick-and-morty.gif');
+    mask-image: url('img/portal-rick-and-morty.gif');
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+    background-color: black;
+}
+
+.portal-ahu{
+    height: 100%;
+    width: 20%;
+
+}
+
+.portal-ahu img{
+    object-fit: cover;
+    -webkit-mask-image: url('img/portal-rick-and-morty.gif');
+    mask-image: url('img/portal-rick-and-morty.gif');
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    object-position:right;
+}
+
+.portal-ricardo {
+    height: 100%;
+    width: 20%;
+}
+
+.portal-ricardo img{
+    object-fit: cover;
+    -webkit-mask-image: url('img/portal-rick-and-morty.gif');
+    mask-image: url('img/portal-rick-and-morty.gif');
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+    background-color: black;
+    height: 100%;
+    width: 100%;
 }
