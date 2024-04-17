@@ -61,6 +61,29 @@ function loadTasksFromLocalStorage() {
     }
 }
 
+function loadTasksFromJson() {
+    const jsonData = url.value;
+    try {
+      const parsedData = JSON.parse(jsonData);
+      if (Array.isArray(parsedData)) {
+        tasks = parsedData;
+        saveTasksToLocalStorage();  
+        list.innerHTML = '';
+        tasks.forEach(task => {
+          taskToDom(task);
+        });
+        url.value = '';
+      } else {
+        throw new Error('Invalid JSON data');
+      }
+    } catch (error) {
+      console.error('Error parsing JSON:', error);
+      alert('Erreur lors du chargement des tâches. Veuillez vérifier le format JSON.');
+    }
+}
+  
+load.addEventListener("click", loadTasksFromJson);
+
 add.addEventListener("click",newTask);
 clear.addEventListener("click",() =>{list.innerHTML=""});
 window.addEventListener('load', loadTasksFromLocalStorage);
